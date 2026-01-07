@@ -11,7 +11,8 @@ import streamlit as st
 
 class DetectionManager:
     def __init__(self):
-        self.model_path = r"C:\Users\AISHANI GOYAL\Downloads\AI_App\ai_app\best.pt"
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        self.model_path = os.path.join(BASE_DIR, "models", "best.pt")
         self.model = None
         self.class_names = {
             0: "Stones / Stone Pillars / Stone Structures",

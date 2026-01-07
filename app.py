@@ -2,6 +2,12 @@ import streamlit as st
 import os
 import sys
 from pathlib import Path
+import warnings
+warnings.filterwarnings(
+    "ignore",
+    message=".*use_column_width.*",
+)
+
 
 # Add the current directory to Python path
 sys.path.append(str(Path(__file__).parent))

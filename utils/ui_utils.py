@@ -278,7 +278,7 @@ def create_detection_charts(stats: Dict):
             paper_bgcolor='rgba(0,0,0,0)',
             font=dict(family="Source Sans Pro", size=12)
         )
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, width='stretch')
     
     # Pie chart for distribution
     if len(stats['class_counts']) > 1:
@@ -293,7 +293,7 @@ def create_detection_charts(stats: Dict):
             paper_bgcolor='rgba(0,0,0,0)',
             font=dict(family="Source Sans Pro", size=12)
         )
-        st.plotly_chart(fig_pie, use_container_width=True)
+        st.plotly_chart(fig_pie, width='stretch')
     
     # Confidence histogram
     if stats.get('all_detections'):
@@ -310,7 +310,7 @@ def create_detection_charts(stats: Dict):
             paper_bgcolor='rgba(0,0,0,0)',
             font=dict(family="Source Sans Pro", size=12)
         )
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, width='stretch')
 
 def create_summary_text(stats: Dict, duration: float = None) -> str:
     """Generate a summary text from detection statistics"""
